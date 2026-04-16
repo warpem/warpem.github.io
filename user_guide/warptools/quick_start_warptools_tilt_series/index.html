@@ -1221,6 +1221,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Initial 3D Refinement in RELION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-initial-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Initial Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refine3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refine3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2650,6 +2678,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Initial 3D Refinement in RELION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-initial-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Initial Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refine3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refine3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3637,8 +3693,39 @@ in the settings file at any time!</p>
 and orientations before attempting high resolution refinements in M.
 3D classification in RELION can also be used to separate particles into different
 classes.</p>
+<h3 id="generate-initial-reference">Generate Initial Reference</h3>
+<p>First, we generate an initial reference de novo using RELION's
+Initial Model job. This produces a low-resolution starting model
+from the exported particles without requiring any prior structural knowledge.</p>
+<div class="highlight"><span class="filename">Generate initial reference</span><pre><span></span><code>relion_refine<span class="w"> </span><span class="se">\</span>
+--K<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+--iter<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="se">\</span>
+--tau2_fudge<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+--particle_diameter<span class="w"> </span><span class="m">130</span><span class="w"> </span><span class="se">\</span>
+--flatten_solvent<span class="w"> </span><span class="se">\</span>
+--sym<span class="w"> </span>O<span class="w"> </span><span class="se">\</span>
+--sigma_tilt<span class="w"> </span>-1<span class="w"> </span><span class="se">\</span>
+--ctf<span class="w"> </span><span class="se">\</span>
+--j<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
+--gpu<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="se">\</span>
+--grad<span class="w"> </span><span class="se">\</span>
+--denovo_3dref<span class="w"> </span><span class="se">\</span>
+--healpix_order<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
+--offset_range<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="se">\</span>
+--offset_step<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
+--pool<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
+--pad<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+--dont_combine_weights_via_disc<span class="w"> </span><span class="se">\</span>
+--oversampling<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+--ios<span class="w"> </span>matching_optimisation_set.star<span class="w"> </span><span class="se">\</span>
+--o<span class="w"> </span>InitialModel/job001/run<span class="w"> </span><span class="se">\</span>
+--pipeline_control<span class="w"> </span>InitialModel/job001/
+</code></pre></div>
+<p>The resulting initial model will be saved as
+<code>InitialModel/job001/run_it100_class001.mrc</code>.</p>
+<h3 id="refine3d">Refine3D</h3>
 <p>For this apoferritin dataset, an unmasked 3D refinement
-starting from a 130Å sphere filtered to 60Å refines directly to the Nyquist limit of 8Å.</p>
+starting from this initial model refines directly to the Nyquist limit of 8Å.</p>
 <div class="highlight"><span class="filename">Refine3D text output</span><pre><span></span><code> Auto-refine: Refinement has converged, stopping now... 
  Auto-refine: + Final reconstruction from all particles is saved as: Refine3D/job001/run_class001.mrc
  Auto-refine: + Final model parameters are stored in: Refine3D/job001/run_model.star
@@ -3658,7 +3745,7 @@ starting from a 130Å sphere filtered to 60Å refines directly to the Nyquist li
 --auto_refine \
 --split_random_halves \
 --ios matching_optimisation_set.star \
---ref sphere.mrc \
+--ref InitialModel/job001/run_it100_class001.mrc \
 --trust_ref_size \
 --ini_high 40 \
 --dont_combine_weights_via_disc \
