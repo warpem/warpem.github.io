@@ -2520,8 +2520,8 @@ Showing all available options for command ts_import:
 
 --tilt_exposure    REQUIRED Per-tilt exposure in e-/A^2
 
---dont_invert      Don&#39;t invert tilt angles compared to IMOD&#39;s convention (inver
-                   sion is usually needed to match IMOD&#39;s geometric handedness).
+--dont_invert      Don't invert tilt angles compared to IMOD's convention (inver
+                   sion is usually needed to match IMOD's geometric handedness).
                     This will flip the geometric handedness
 
 --override_axis    Override the tilt axis angle with this value
@@ -2557,9 +2557,9 @@ Showing all available options for command ts_stack:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2617,9 +2617,9 @@ Showing all available options for command ts_aretomo:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2631,7 +2631,7 @@ Showing all available options for command ts_aretomo:
 --mask                    Apply mask to each image if available; masked areas wi
                           ll be filled with Gaussian noise
 
---alignz                  REQUIRED Value for AreTomo&#39;s AlignZ parameter in Angst
+--alignz                  REQUIRED Value for AreTomo's AlignZ parameter in Angst
                           rom (will be auto-converted to binned pixels), i.e. th
                           e thickness of the reconstructed tomogram used for ali
                           gnments
@@ -2642,17 +2642,17 @@ Showing all available options for command ts_aretomo:
                           xed angle
 
 --axis_batch              Default: 0. Use only this many tilt series for the til
-                          t axis angle search; only relevant if --axis_iter isn&#39;
+                          t axis angle search; only relevant if --axis_iter isn'
                           t 0
 
 --min_fov                 Default: 0. Disable tilts that contain less than this 
-                          fraction of the tomogram&#39;s field of view due to excess
+                          fraction of the tomogram's field of view due to excess
                           ive shifts
 
 --axis                    Override tilt axis angle with this value
 
 --patches                 Number of patches for local alignments in X, Y, separa
-                          ted by &#39;x&#39;: e.g. 6x4. Increases processing time.
+                          ted by 'x': e.g. 6x4. Increases processing time.
 
 --delete_intermediate     Delete tilt series stacks generated for AreTomo
 
@@ -2706,9 +2706,9 @@ Showing all available options for command ts_etomo_fiducials:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2721,7 +2721,7 @@ Showing all available options for command ts_etomo_fiducials:
                           ll be filled with Gaussian noise
 
 --min_fov                 Default: 0. Disable tilts that contain less than this 
-                          fraction of the tomogram&#39;s field of view due to excess
+                          fraction of the tomogram's field of view due to excess
                           ive shifts
 
 --initial_axis            Override initial tilt axis angle with this value
@@ -2781,9 +2781,9 @@ Showing all available options for command ts_etomo_patches:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2796,7 +2796,7 @@ Showing all available options for command ts_etomo_patches:
                           ll be filled with Gaussian noise
 
 --min_fov                 Default: 0. Disable tilts that contain less than this 
-                          fraction of the tomogram&#39;s field of view due to excess
+                          fraction of the tomogram's field of view due to excess
                           ive shifts
 
 --initial_axis            Override initial tilt axis angle with this value
@@ -2855,9 +2855,9 @@ Showing all available options for command ts_import_alignments:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2871,7 +2871,7 @@ Showing all available options for command ts_import_alignments:
                            shifts from pixels to Angstrom)
 
 --min_fov                 Default: 0. Disable tilts that contain less than this 
-                          fraction of the tomogram&#39;s field of view due to excess
+                          fraction of the tomogram's field of view due to excess
                           ive shifts
 
 
@@ -2906,22 +2906,22 @@ Showing all available options for command ts_defocus_hand:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
 
---check                   Only check the defocus handedness, but don&#39;t set anyth
+--check                   Only check the defocus handedness, but don't set anyth
                           ing
 
 --set_auto                Check the defocus handedness and set the determined va
                           lue for all tilt series
 
---set_flip                Set handedness to &#39;flip&#39; for all tilt series
+--set_flip                Set handedness to 'flip' for all tilt series
 
---set_noflip              Set handedness to &#39;no flip&#39; for all tilt series
+--set_noflip              Set handedness to 'no flip' for all tilt series
 
 --set_switch              Switch whatever handedness value each tilt series has 
                           to the opposite value
@@ -2958,9 +2958,9 @@ Showing all available options for command ts_ctf:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -3042,9 +3042,9 @@ Showing all available options for command ts_reconstruct:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -3057,7 +3057,7 @@ Showing all available options for command ts_reconstruct:
                           ies with --average_halves previously)
 
 --halfmap_tilts           Also produce two half-tomograms, each reconstructed fr
-                          om half of the tilts (doesn&#39;t work quite as well as --
+                          om half of the tilts (doesn't work quite as well as --
                           halfmap_frames)
 
 --deconv                  Also produce a deconvolved version; all half-tomograms
@@ -3072,21 +3072,21 @@ Showing all available options for command ts_reconstruct:
 --deconv_highpass         Default: 300. High-pass value (in Angstrom) of the dec
                           onvolution filter, if requested
 
---keep_full_voxels        Mask out voxels that aren&#39;t contained in some of the t
-                          ilt images (due to excessive sample shifts); don&#39;t use
+--keep_full_voxels        Mask out voxels that aren't contained in some of the t
+                          ilt images (due to excessive sample shifts); don't use
                            if you intend to run template matching
 
---dont_invert             Don&#39;t invert the contrast; contrast inversion is neede
+--dont_invert             Don't invert the contrast; contrast inversion is neede
                           d for template matching on cryo data, i.e. when the de
                           nsity is dark in original images
 
---dont_normalize          Don&#39;t normalize the tilt images
+--dont_normalize          Don't normalize the tilt images
 
---dont_mask               Don&#39;t apply a mask to each tilt image if available; ot
+--dont_mask               Don't apply a mask to each tilt image if available; ot
                           herwise, masked areas will be filled with Gaussian noi
                           se
 
---dont_overwrite          Don&#39;t overwrite existing tomograms in output directory
+--dont_overwrite          Don't overwrite existing tomograms in output directory
 
 --subvolume_size          Default: 64. Reconstruction is performed locally using
                            sub-volumes of this size in pixel
@@ -3142,9 +3142,9 @@ Showing all available options for command ts_template_match:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -3163,7 +3163,7 @@ Showing all available options for command ts_template_match:
 --template_diameter       REQUIRED Template diameter in Angstrom
 
 --template_flip           Mirror the template along the X axis to flip the hande
-                          dness; &#39;_flipx&#39; will be added to the template&#39;s name
+                          dness; '_flipx' will be added to the template's name
 
 --symmetry                Default: C1. Symmetry of the template, e.g. C1, D7, O
 
@@ -3171,14 +3171,14 @@ Showing all available options for command ts_template_match:
                           r search step: 2 = 15° step, 3 = 7.5°, 4 = 3.75° and s
                           o on
 
---tilt_range              Limit the range of angles between the reference&#39;s Z ax
-                          is and the tomogram&#39;s XY plane to plus/minus this valu
+--tilt_range              Limit the range of angles between the reference's Z ax
+                          is and the tomogram's XY plane to plus/minus this valu
                           e, in °; useful for matching filaments lying flat in t
                           he XY plane
 
 --batch_angles            Default: 32. How many orientations to evaluate at once
                           ; memory consumption scales linearly with this; higher
-                           than 32 probably won&#39;t lead to speed-ups
+                           than 32 probably won't lead to speed-ups
 
 --peak_distance           Minimum distance (in Angstrom) between peaks; leave em
                           pty to use template diameter
@@ -3186,7 +3186,7 @@ Showing all available options for command ts_template_match:
 --npeaks                  Default: 2000. Maximum number of peak positions to sav
                           e
 
---dont_normalize          Don&#39;t set score distribution to median = 0, stddev = 1
+--dont_normalize          Don't set score distribution to median = 0, stddev = 1
 
 --whiten                  Perform spectral whitening to give higher-resolution i
                           nformation more weight; this can help when the alignme
@@ -3258,9 +3258,9 @@ Showing all available options for command ts_export_particles:
 
 ------------------------------Data import settings------------------------------
 
---settings                 REQUIRED Path to Warp&#39;s .settings file, typically loc
-                           ated in the processing folder. Default file name is &#39;
-                           previous.settings&#39;.
+--settings                 REQUIRED Path to Warp's .settings file, typically loc
+                           ated in the processing folder. Default file name is '
+                           previous.settings'.
 
 
 ----------------------STAR files with particle coordinates----------------------
@@ -3281,7 +3281,7 @@ Showing all available options for command ts_export_particles:
                            le(s)
 
 --normalized_coords        Are coordinates normalised to the range [0, 1] (e.g. 
-                           from Warp&#39;s template matching)
+                           from Warp's template matching)
 
 
 -------------------------------------Output-------------------------------------
@@ -3310,10 +3310,10 @@ Showing all available options for command ts_export_particles:
 
 ---------------------------------Expert options---------------------------------
 
---dont_normalize_input     Don&#39;t normalize the entire field of view in input 2D 
+--dont_normalize_input     Don't normalize the entire field of view in input 2D 
                            images after high-pass filtering
 
---dont_normalize_3d        Don&#39;t normalize output particle volumes (only works w
+--dont_normalize_3d        Don't normalize output particle volumes (only works w
                            ith --3d)
 
 --n_tilts                  Number of tilt images to include in the output, image
@@ -3367,9 +3367,9 @@ Showing all available options for command ts_eval_model:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -3380,11 +3380,11 @@ Showing all available options for command ts_eval_model:
 
 --grid_extent             Instead of custom positions in --input_star, calculate
                            an evenly spaced grid with this extent in Angstrom, s
-                          pecified as &#39;XxYxZ&#39;, e.g. 6000x4000x1000.
+                          pecified as 'XxYxZ', e.g. 6000x4000x1000.
 
 --grid_dims               When calculating an evenly spaced grid, it will have t
-                          his many points in each dimension, specified as &#39;XxYxZ
-                          &#39;, e.g. 30x20x5. The grid spacing will be grid_extent 
+                          his many points in each dimension, specified as 'XxYxZ
+                          ', e.g. 30x20x5. The grid spacing will be grid_extent 
                           / (grid_dims - 1).
 
 --output                  Output location for the per-tilt series STAR files

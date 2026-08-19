@@ -2822,8 +2822,8 @@ ftp://ftp.ebi.ac.uk/empiar/world_availability/10491/data/gain_ref.mrc<span class
 
 <span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">32</span><span class="p">;</span>
 <span class="k">do</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;======================================================&quot;</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;================= Downloading TS_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2"> ================&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"======================================================"</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"================= Downloading TS_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2"> ================"</span>
 <span class="w">    </span><span class="c1"># download the mdoc file</span>
 <span class="w">    </span>wget<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--timestamping<span class="w"> </span><span class="se">\</span>
@@ -3168,7 +3168,7 @@ These will be used for frame series and tilt series processing respectively.</p>
 --folder_data frames \
 --folder_processing warp_frameseries \
 --output warp_frameseries.settings \
---extension &quot;*.tif&quot; \
+--extension "*.tif" \
 --angpix 0.7894 \
 --gain_path gain_ref.mrc \
 --gain_flip_y \
@@ -3180,7 +3180,7 @@ These will be used for frame series and tilt series processing respectively.</p>
 --output<span class="w"> </span>warp_tiltseries.settings<span class="w"> </span><span class="se">\</span>
 --folder_processing<span class="w"> </span>warp_tiltseries<span class="w"> </span><span class="se">\</span>
 --folder_data<span class="w"> </span>tomostar<span class="w"> </span><span class="se">\</span>
---extension<span class="w"> </span><span class="s2">&quot;*.tomostar&quot;</span><span class="w"> </span><span class="se">\</span>
+--extension<span class="w"> </span><span class="s2">"*.tomostar"</span><span class="w"> </span><span class="se">\</span>
 --angpix<span class="w"> </span><span class="m">0</span>.7894<span class="w"> </span><span class="se">\</span>
 --gain_path<span class="w"> </span>gain_ref.mrc<span class="w"> </span><span class="se">\</span>
 --gain_flip_y<span class="w"> </span><span class="se">\</span>
@@ -3476,7 +3476,7 @@ and applying a correction to the model if necessary.</p>
 <div class="highlight"><span class="filename">Output from Defocus Handedness Check</span><pre><span></span><code>Checking defocus handedness for all tilt series...
 5/5, 0.932                                                                                                                                                                                
 Average correlation: 0.932
-The average correlation is positive, which means that the defocus handedness should be set to &#39;no flip&#39;
+The average correlation is positive, which means that the defocus handedness should be set to 'no flip'
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -3646,7 +3646,7 @@ For this tutorial we will write out 2D particle image series. (1)</p>
 <div class="highlight"><span class="filename">Export 2D particle series</span><pre><span></span><code>WarpTools ts_export_particles \
 --settings warp_tiltseries.settings \
 --input_directory warp_tiltseries/matching \
---input_pattern &quot;*15854_clean.star&quot; \
+--input_pattern "*15854_clean.star" \
 --normalized_coords \
 --output_star relion/matching.star \
 --output_angpix 4 \
@@ -3707,7 +3707,7 @@ from the exported particles without requiring any prior structural knowledge.</p
 --sigma_tilt<span class="w"> </span>-1<span class="w"> </span><span class="se">\</span>
 --ctf<span class="w"> </span><span class="se">\</span>
 --j<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
---gpu<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="se">\</span>
+--gpu<span class="w"> </span><span class="s2">""</span><span class="w"> </span><span class="se">\</span>
 --grad<span class="w"> </span><span class="se">\</span>
 --denovo_3dref<span class="w"> </span><span class="se">\</span>
 --healpix_order<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
@@ -3765,7 +3765,7 @@ starting from this initial model refines directly to the Nyquist limit of 8Å.</
 --norm \
 --scale  \
 --j 2 \
---gpu &quot;&quot;  \
+--gpu ""  \
 --pipeline_control Refine3D/job002/
 </code></pre></div>
 </details>

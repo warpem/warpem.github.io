@@ -2458,9 +2458,9 @@ resubmission. Correctness rests on the existing queue machinery:</p>
 <h3 id="clusterqueuedefinition"><code>ClusterQueueDefinition</code></h3>
 <p>Model + JSON loader for the queue-definition file. Exactly three fields:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;submit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sbatch {{script_path}}&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;submit_job_id_regex&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Submitted batch job (\\d+)&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;cancel&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;scancel {{job_id}}&quot;</span>
+<span class="w">  </span><span class="nt">"submit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sbatch {{script_path}}"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"submit_job_id_regex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Submitted batch job (\\d+)"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"cancel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scancel {{job_id}}"</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
@@ -2501,7 +2501,7 @@ broken job script.</p>
 <li>Builds the built-in <code>{{command}}</code> value. For <code>--perdevice N</code> it launches N worker
   processes in the background on the job's one GPU and ends with <code>wait</code> (so the job
   holds its allocation until the workers exit):
-  <div class="highlight"><pre><span></span><code>&quot;&lt;abs WarpWorker2&gt;&quot; --device 0 --queue-dir &quot;&lt;queueDir&gt;&quot; --log-dir &quot;&lt;logDir&gt;&quot; --persistent --worker-id &quot;$(hostname)-$$-0&quot; &amp;
+  <div class="highlight"><pre><span></span><code>"&lt;abs WarpWorker2&gt;" --device 0 --queue-dir "&lt;queueDir&gt;" --log-dir "&lt;logDir&gt;" --persistent --worker-id "$(hostname)-$$-0" &amp;
 ... (one line per process, index 0..N-1) ...
 wait
 </code></pre></div></li>

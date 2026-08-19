@@ -2661,11 +2661,11 @@ worker needs only filesystem access to a shared directory.</p>
 <h2 id="3-roles-layering">3. Roles &amp; layering</h2>
 <div class="highlight"><pre><span></span><code>Relay  (OPTIONAL outer layer — DEFERRED, documented in §12, not implemented now)
   ├── Submits the Manager as a single cluster job; monitors it via the scheduler.
-  ├── Maintains a &quot;dumb&quot; worker pool: ensures N worker cluster jobs are
+  ├── Maintains a "dumb" worker pool: ensures N worker cluster jobs are
   │   submitted/running; replaces ended ones; caps total submissions.
   └── Knows nothing about the task queue contents. Reads only:
-        - the Manager job&#39;s scheduler status (alive / ended / failed)
-        - the Manager&#39;s stdout (progress), same as today
+        - the Manager job's scheduler status (alive / ended / failed)
+        - the Manager's stdout (progress), same as today
 
 Manager  (WarpTools / MTools / MCore binary, runs on a cluster node in cluster mode,
           or on the local machine in local mode)
@@ -2709,11 +2709,11 @@ false-terminal results in a subsequent run.</p>
 <div class="highlight"><pre><span></span><code>queue_dir/
   pending/                 &lt;task_id&gt;.json            # awaiting claim
   running/&lt;wid&gt;/           &lt;task_id&gt;.json            # claimed by worker &lt;wid&gt;
-                           hostname                  # worker&#39;s hostname (written at startup)
+                           hostname                  # worker's hostname (written at startup)
                            hb-NNNNNN                 # worker heartbeat tick (latest only kept)
                            sick                      # present iff worker hardware-excluded itself
-  done/                    &lt;task_id&gt;.json            # completed, with &quot;result&quot;
-  failed/                  &lt;task_id&gt;.json            # failed, with &quot;error&quot; + failure history
+  done/                    &lt;task_id&gt;.json            # completed, with "result"
+  failed/                  &lt;task_id&gt;.json            # failed, with "error" + failure history
   poisoned/                &lt;task_id&gt;.json            # exceeded per-task retry cap (§10)
   heartbeat/               tick-NNNNNN               # manager liveness (latest only kept)
   sick/                    &lt;wid&gt;                     # hardware-excluded workers (contains hostname)
@@ -2736,14 +2736,14 @@ knowledge). Liveness is determined purely by the worker's own heartbeat.</p>
 (the <strong>same</strong> type used today for REST communication — it already round-trips
 through JSON, so it can be written to and reloaded from disk without change).</p>
 <div class="highlight"><pre><span></span><code>{
-  &quot;task_id&quot;: &quot;0000042-ctf-stack017&quot;,   // sortable numeric prefix = priority (§11)
-  &quot;stage&quot;: &quot;preprocess&quot;,                // for stage filtering (§11)
-  &quot;requires_gpu&quot;: true,                 // workers excluded to CPU-only skip GPU tasks (§12)
-  &quot;init&quot;:  [ &lt;NamedSerializableObject&gt;, ... ],   // resource-loading prerequisites
-  &quot;main&quot;:  [ &lt;NamedSerializableObject&gt;, ... ],   // the actual work
-  &quot;init_fingerprint&quot;: &quot;&lt;sha256 over the serialized init array&gt;&quot;,
-  &quot;retry_count&quot;: 0,                     // incremented each time it lands in failed/ then re-pended
-  &quot;created_at&quot;: &quot;&lt;iso8601&gt;&quot;
+  "task_id": "0000042-ctf-stack017",   // sortable numeric prefix = priority (§11)
+  "stage": "preprocess",                // for stage filtering (§11)
+  "requires_gpu": true,                 // workers excluded to CPU-only skip GPU tasks (§12)
+  "init":  [ &lt;NamedSerializableObject&gt;, ... ],   // resource-loading prerequisites
+  "main":  [ &lt;NamedSerializableObject&gt;, ... ],   // the actual work
+  "init_fingerprint": "&lt;sha256 over the serialized init array&gt;",
+  "retry_count": 0,                     // incremented each time it lands in failed/ then re-pended
+  "created_at": "&lt;iso8601&gt;"
 }
 </code></pre></div>
 <h3 id="51-why-init-main">5.1 Why init + main</h3>

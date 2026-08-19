@@ -2400,9 +2400,9 @@ Showing all available options for command fs_motion_and_ctf:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2417,7 +2417,7 @@ Showing all available options for command fs_motion_and_ctf:
                           sing a B-factor, in Angstrom^2
 
 --m_grid                  Resolution of the motion model grid in X, Y, and tempo
-                          ral dimensions, separated by &#39;x&#39;: e.g. 5x5x40; empty =
+                          ral dimensions, separated by 'x': e.g. 5x5x40; empty =
                            auto
 
 --c_window                Default: 512. Patch size for CTF estimation in binned 
@@ -2447,11 +2447,11 @@ Showing all available options for command fs_motion_and_ctf:
 --c_fit_phase             Fit the phase shift of a phase plate
 
 --c_use_sum               Use the movie average spectrum instead of the average 
-                          of individual frames&#39; spectra. Can help in the absence
+                          of individual frames' spectra. Can help in the absence
                            of an energy filter, or when signal is low.
 
 --c_grid                  Resolution of the defocus model grid in X, Y, and temp
-                          oral dimensions, separated by &#39;x&#39;: e.g. 5x5x40; empty 
+                          oral dimensions, separated by 'x': e.g. 5x5x40; empty 
                           = auto; Z &gt; 1 is purely experimental
 
 --out_averages            Export aligned averages
@@ -2511,9 +2511,9 @@ Showing all available options for command fs_motion:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2528,7 +2528,7 @@ Showing all available options for command fs_motion:
                           sing a B-factor, in Angstrom^2
 
 --grid                    Resolution of the motion model grid in X, Y, and tempo
-                          ral dimensions, separated by &#39;x&#39;: e.g. 5x5x40; empty =
+                          ral dimensions, separated by 'x': e.g. 5x5x40; empty =
                            auto
 
 --averages                Export aligned averages
@@ -2588,9 +2588,9 @@ Showing all available options for command fs_ctf:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2622,11 +2622,11 @@ Showing all available options for command fs_ctf:
 --fit_phase               Fit the phase shift of a phase plate
 
 --use_sum                 Use the movie average spectrum instead of the average 
-                          of individual frames&#39; spectra. Can help in the absence
+                          of individual frames' spectra. Can help in the absence
                            of an energy filter, or when signal is low.
 
 --grid                    Resolution of the defocus model grid in X, Y, and temp
-                          oral dimensions, separated by &#39;x&#39;: e.g. 5x5x40; empty 
+                          oral dimensions, separated by 'x': e.g. 5x5x40; empty 
                           = auto; Z &gt; 1 is purely experimental
 
 
@@ -2676,9 +2676,9 @@ Showing all available options for command fs_boxnet_infer:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2768,7 +2768,7 @@ Showing all available options for command fs_boxnet_train:
                       to train a more general model, which will be mixed 1:1 wit
                       h new examples to reduce overfitting
 
---no_mask             Don&#39;t consider mask labels in training; they will be conve
+--no_mask             Don't consider mask labels in training; they will be conve
                       rted to background labels
 
 --patchsize           Default: 512. Size of the BoxNet input window, a multiple 
@@ -2799,9 +2799,9 @@ Showing all available options for command fs_export_micrographs:
 
 ------------------------------Data import settings------------------------------
 
---settings                REQUIRED Path to Warp&#39;s .settings file, typically loca
-                          ted in the processing folder. Default file name is &#39;pr
-                          evious.settings&#39;.
+--settings                REQUIRED Path to Warp's .settings file, typically loca
+                          ted in the processing folder. Default file name is 'pr
+                          evious.settings'.
 
 
 --------------------------------------------------------------------------------
@@ -2863,9 +2863,9 @@ Showing all available options for command fs_export_particles:
 
 ------------------------------Data import settings------------------------------
 
---settings                 REQUIRED Path to Warp&#39;s .settings file, typically loc
-                           ated in the processing folder. Default file name is &#39;
-                           previous.settings&#39;.
+--settings                 REQUIRED Path to Warp's .settings file, typically loc
+                           ated in the processing folder. Default file name is '
+                           previous.settings'.
 
 
 ----------------------STAR files with particle coordinates----------------------
@@ -2882,7 +2882,7 @@ Showing all available options for command fs_export_particles:
 -o, --output               REQUIRED Where to write the STAR file containing info
                            rmation about the exported particles
 
---suffix_out               Default: . Suffix to add at the end of each stack&#39;s n
+--suffix_out               Default: . Suffix to add at the end of each stack's n
                            ame; the full name will be [movie name][--suffix_out]
                            .mrcs
 
@@ -2907,7 +2907,7 @@ Showing all available options for command fs_export_particles:
 --halves                   Export particle half-averages e.g. for denoising; mut
                            ually exclusive with other export types
 
---only_star                Don&#39;t export, only write out STAR table; mutually exc
+--only_star                Don't export, only write out STAR table; mutually exc
                            lusive with other export types
 
 
@@ -2921,11 +2921,11 @@ Showing all available options for command fs_export_particles:
 
 ---------------------------------Expert options---------------------------------
 
---dont_invert              Don&#39;t invert contrast, e.g. for negative stain data
+--dont_invert              Don't invert contrast, e.g. for negative stain data
 
---dont_normalize           Don&#39;t normalize background (RELION will complain!)
+--dont_normalize           Don't normalize background (RELION will complain!)
 
---dont_center              Don&#39;t re-center particles based on refined shifts
+--dont_center              Don't re-center particles based on refined shifts
 
 --flip_phases              Pre-flip phases in bigger box to avoid signal loss du
                            e to delocalization
