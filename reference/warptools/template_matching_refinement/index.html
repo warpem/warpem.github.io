@@ -12,13 +12,13 @@
         <meta name="author" content="Dimitry Tegunov">
       
       
-        <link rel="canonical" href="https://warpem.com/reference/warptools/processing_tilt_series_stacks/">
+        <link rel="canonical" href="https://warpem.com/reference/warptools/template_matching_refinement/">
       
       
-        <link rel="prev" href="../advanced_data_flow/">
+        <link rel="prev" href="../tomogram_particle_files/">
       
       
-        <link rel="next" href="../tomogram_denoising/">
+        <link rel="next" href="../processing_warp_v1_data/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Processing Tilt Series Stacks - Warp, M and friends</title>
+        <title>Template Matching Refinement - Warp, M and friends</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#processing-tilt-series-stacks" class="md-skip">
+        <a href="#tilt-series-template-matching" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Processing Tilt Series Stacks
+              Template Matching Refinement
             
           </span>
         </div>
@@ -1642,37 +1642,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Processing Tilt Series Stacks
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../processing_tilt_series_stacks/" class="md-nav__link">
         
   
   
@@ -1688,104 +1661,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#splitting-tilt-series-stacks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Splitting Tilt Series Stacks
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Splitting Tilt Series Stacks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Preparation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running the script
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subsequent-processing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subsequent Processing
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Subsequent Processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#differences" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Differences
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1851,10 +1726,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../template_matching_refinement/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template Matching Refinement
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1870,6 +1772,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scores-and-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scores and outputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-resource-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls and resource use
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2329,49 +2284,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#splitting-tilt-series-stacks" class="md-nav__link">
+  <a href="#algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Splitting Tilt Series Stacks
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Splitting Tilt Series Stacks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Preparation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running the script
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output
+        Algorithm
       
     </span>
   </a>
@@ -2379,30 +2295,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subsequent-processing" class="md-nav__link">
+  <a href="#scores-and-outputs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subsequent Processing
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Subsequent Processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#differences" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Differences
+        Scores and outputs
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-resource-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls and resource use
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2426,143 +2336,127 @@
   
 
 
-<h1 id="processing-tilt-series-stacks">Processing Tilt Series Stacks</h1>
-<p><code>WarpTools</code> expects multi-frame micrographs (movies) as input when processing
-tilt series data. Sometimes only tilt series stacks are available.
-This page will show you how to prepare tilt series stacks for processing in
-<code>WarpTools</code>.</p>
-<p>We will use a SARS-CoV-2 tilt series from <a href="https://www.ebi.ac.uk/empiar/EMPIAR-10453/">EMPIAR-10453</a> to demonstrate.
-The script may need to be modified for other datasets.</p>
-<h2 id="splitting-tilt-series-stacks">Splitting Tilt Series Stacks</h2>
-<p>We will use a simple script to split our tilt series into individual tilt images.</p>
-<h3 id="preparation">Preparation</h3>
-<p>This Python scripts depends on the Python packages
-<a href="https://github.com/ccpem/mrcfile">mrcfile</a>,
-<a href="https://github.com/cgohlke/tifffile">tifffile</a>
-and
-<a href="https://github.com/teamtomo/mdocfile">mdocfile</a>.
-These can be installed from <a href="https://pypi.org/">PyPI</a> in your warp conda environment.</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mrcfile<span class="w"> </span>tifffile<span class="w"> </span>mdocfile
+<h1 id="tilt-series-template-matching">Tilt-series template matching</h1>
+<p><code>ts_template_match</code> builds its own matched-filter volume from the original tilt images, proposes poses in 3D, and refines them against the tilt images. An existing reconstructed tomogram is not required. Alignment and CTF metadata and the processed movie averages must remain accessible. This is the WarpTools workflow.</p>
+<div class="highlight"><pre><span></span><code>WarpTools<span class="w"> </span>ts_template_match<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--settings<span class="w"> </span>processing.settings<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--tomo_angpix<span class="w"> </span><span class="m">4</span>.5<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template_path<span class="w"> </span>template.mrc<span class="w"> </span>--template_angpix<span class="w"> </span><span class="m">1</span>.5<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template_diameter<span class="w"> </span><span class="m">130</span><span class="w"> </span>--symmetry<span class="w"> </span>C1<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--subdivisions<span class="w"> </span><span class="m">3</span><span class="w"> </span>--peak_distance<span class="w"> </span><span class="m">60</span><span class="w"> </span>--npeaks<span class="w"> </span><span class="m">8000</span>
 </code></pre></div>
-<h3 id="running-the-script">Running the script</h3>
-<p>Below is the starting directory structure and the contents of the Python script.</p>
-<div class="highlight"><span class="filename">directory structure (single tilt series)</span><pre><span></span><code>.
-├── mdoc
-│   └── TS_005.mrc.mdoc
-├── tiltseries
-│   └── TS_005.mrc
-└── warp_ts_split_10453.py
+<p>The example describes a small target; choose diameter, symmetry, minimum separation, and sampling for the actual specimen. A missing proposal cannot be recovered by refinement. Score threshold selection remains with the user.</p>
+<h2 id="algorithm">Algorithm</h2>
+<ol>
+<li>Estimate each tilt's independent white-noise level from unselected, unmasked patches at the original sampling, using the median high-frequency periodogram divided by <code>ln(2)</code>. Estimation precedes binning so the annulus is not moved into the protein signal band. This is an image-derived approximation pending propagated movie noise spectra.</li>
+<li>Reconstruct <code>V = sum BP[H* data / N]</code>, where <code>H</code> contains CTF and the existing dose/tilt envelope. Filter images at defocus intervals of at most 200 Å and interpolate between them during backprojection. The spatial mapping uses Warp's geometry, sampled every 16 coarse voxels and interpolated; it includes image shifts, specimen deformation, and defocus handedness. Original tilt images and metadata are not overwritten.</li>
+<li>Estimate the anisotropic 3D power spectrum of <code>V</code> by Gaussian tapering its autocorrelation with a 130 Å standard deviation. Whiten the data by <code>sqrt(P)</code>. Filter the rotated template by the center-of-volume slice transfer <code>sum |H|²/N</code> and the same whitening spectrum. This center transfer is a stationary approximation; local defocus is retained in the data reconstruction and particle refinement. Normalize templates and apply local volume-standard-deviation normalization to the correlations.</li>
+<li>Maintain the top eight orientation scores and IDs per voxel while streaming orientations. Detect immediate-neighbor maxima and greedily apply spherical spatial suppression. Gather the peak's and six adjacent voxels' pose lists; only sparse lists leave the GPU. Default: 8,000 proposals, up to 32 starts per proposal. A memory budget caps the concurrent orientation batch.</li>
+<li>Refine poses using GPU-resident FP32 BFGS with analytic derivatives of Fourier interpolation, translation, and defocus. Particle rotations are exact rotations; local deformation and viewing geometry are frozen at each proposal. Physically pad the template and particle patches for its support, CTF delocalization, and allowed motion. Start at the coarse-search resolution limit and double spatial frequency at each transition (halve the resolution in Å), capped at the requested fine limit: for example, 20 → 10 → 6 Å. Identical coarse and fine limits give one band and zero resolution transitions. There is no stage-count parameter. Merge only nearly identical hypotheses between bands.</li>
+<li>Measure an anisotropic per-tilt patch PSD and use the hybrid metric
+   <code>W = 1 / [N + c * max(P - N, 0)]</code>.
+   <code>c</code> counts geometrically overlapping components among that candidate's usable tilts. The overlap length is <code>max(400 Å, 3 × target diameter)</code>. The quadratic metric receives this weight once; independent detector noise is not multiplied by multiplicity. The particle core and its allowed motion must remain in view. Padding outside image boundaries is filled with zero after subtracting the observed patch mean; patches touching contamination masks are excluded. At least three usable tilts are required.</li>
+<li>Before the final band, use up to 300 spatially distinct strong candidates to fit one shared dose-damage slope and pooled relative tilt amplitudes. The slope grid is 0, 1, 2, 3, 4, 5, 6, 8, 10 Å²/(e/Å²); the reference envelope is <code>exp(-slope * dose * q² / 4)</code>. Score comparisons use fixed-pose per-tilt sufficient statistics. Tilt amplitudes have their overall scale removed. A single-band request repeats that band after calibration. Calibration requires at least eight usable candidates and does not use labels or a requested particle count.</li>
+<li>At final poses, estimate amplitude bounds from the 2nd and 98th percentiles of up to 300 distinct strong candidates. Rank by bounded-amplitude weighted log likelihood, then apply final spherical suppression. With fewer than eight calibration candidates, use the nonnegative free-amplitude profile score.</li>
+</ol>
+<p>Boundary padding follows the research implementation; truncation of weak delocalized template tails at detector edges is an approximation, not an explicit masked-pixel likelihood. The weighting is a diagonal approximation to correlated structural background, not a full covariance likelihood. The multiplicity length and empirical amplitude interval are defaults supported by the synthetic experiments; their transfer to heterogeneous experimental particles needs evaluation. The highest-scoring starts are alternative explanations, not independent evidence.</p>
+<h2 id="scores-and-outputs">Scores and outputs</h2>
+<p>For weighted inner product <code>C</code> and model power <code>P</code>:</p>
+<div class="highlight"><pre><span></span><code>projection score = C / sqrt(P)
+unconstrained nonnegative amplitude = max(C, 0) / P
+bounded amplitude = clamp(C / P, lower, upper)
+final score = bounded_amplitude * C - bounded_amplitude² * P / 2
 </code></pre></div>
-<div class="highlight"><span class="filename">warp_ts_split_10453.py</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">mrcfile</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">mdocfile</span>
-
-<span class="c1"># modify these variables for your own processing</span>
-<span class="n">OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="s1">'movies'</span>
-<span class="n">TILT_SERIES_DIRECTORY</span> <span class="o">=</span> <span class="s1">'tiltseries'</span>
-<span class="n">MDOC_DIRECTORY</span> <span class="o">=</span> <span class="s1">'mdoc'</span>
-
-
-<span class="c1"># define a function for processing a single tilt series</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">process_tilt_series</span><span class="p">(</span><span class="n">mdoc_file</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
-    <span class="c1"># load mdoc into pandas dataframe</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">mdocfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">mdoc_file</span><span class="p">)</span>
-
-    <span class="c1"># load tilt series into numpy array</span>
-    <span class="n">tilt_series_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">TILT_SERIES_DIRECTORY</span><span class="p">)</span> <span class="o">/</span> <span class="n">mdoc_file</span><span class="o">.</span><span class="n">stem</span>
-    <span class="n">tilt_series</span> <span class="o">=</span> <span class="n">mrcfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">tilt_series_file</span><span class="p">)</span>
-
-    <span class="c1"># check for same number of tilts in mdoc and image file</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tilt_series</span><span class="p">):</span>
-        <span class="n">e</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'more tilts in mdoc than tilt series for </span><span class="si">{</span><span class="n">mdoc_file</span><span class="si">}</span><span class="s1">'</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-
-    <span class="c1"># split tilt series into individual tilts</span>
-    <span class="k">for</span> <span class="n">movie_path</span><span class="p">,</span> <span class="n">image</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'SubFramePath'</span><span class="p">],</span> <span class="n">tilt_series</span><span class="p">):</span>
-        <span class="n">output_movie_file</span> <span class="o">=</span> <span class="n">output_directory</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="n">movie_path</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">output_movie_file</span><span class="o">.</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'.mrc'</span><span class="p">:</span>
-            <span class="n">mrcfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output_movie_file</span><span class="p">,</span> <span class="n">image</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">output_movie_file</span><span class="o">.</span><span class="n">suffix</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">'.tif'</span><span class="p">,</span> <span class="s1">'.tiff'</span><span class="p">):</span>
-            <span class="n">tifffile</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">output_movie_file</span><span class="p">,</span> <span class="n">image</span><span class="p">)</span>
-
-<span class="c1"># main program which loops over all tilt series...</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
-    <span class="c1"># create output directory</span>
-    <span class="n">Path</span><span class="p">(</span><span class="n">OUTPUT_DIRECTORY</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-    <span class="c1"># get list of mdoc files to process</span>
-    <span class="n">mdocs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">MDOC_DIRECTORY</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'*.mdoc'</span><span class="p">))</span>
-
-    <span class="c1"># process mdoc files one by one</span>
-    <span class="k">for</span> <span class="n">mdoc</span> <span class="ow">in</span> <span class="n">mdocs</span><span class="p">:</span>
-        <span class="n">process_tilt_series</span><span class="p">(</span><span class="n">mdoc_file</span><span class="o">=</span><span class="n">mdoc</span><span class="p">,</span> <span class="n">output_directory</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="n">OUTPUT_DIRECTORY</span><span class="p">))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>warp_ts_split_10453.py
-</code></pre></div>
-<h2 id="output">Output</h2>
-<div class="highlight"><span class="filename">output directory structure</span><pre><span></span><code>.
-├── mdoc
-│   └── TS_005.mrc.mdoc
-├── movies
-│   ├── TS_005_001_-0.0.tif
-│   ├── TS_005_002_3.0.tif
-│   ├── TS_005_003_6.0.tif
-│   ├── TS_005_004_-3.0.tif
-│   ├── TS_005_005_-6.0.tif
-│   ├── TS_005_006_9.0.tif
-│   ├── TS_005_007_12.0.tif
-│   ├── TS_005_008_-9.0.tif
-│   ├── TS_005_009_-12.0.tif
-│   ├── TS_005_010_15.0.tif
-│   ├── TS_005_011_18.0.tif
-│   ├── TS_005_012_-15.0.tif
-│   ├── TS_005_013_-18.0.tif
-│   ├── TS_005_014_21.0.tif
-│   ├── TS_005_015_24.0.tif
-│   ├── TS_005_016_-21.0.tif
-│   ├── TS_005_017_-24.0.tif
-│   ├── TS_005_018_27.0.tif
-│   ├── TS_005_019_30.0.tif
-│   ├── TS_005_020_-27.0.tif
-│   ├── TS_005_021_-30.0.tif
-│   ├── TS_005_022_33.0.tif
-│   ├── TS_005_023_36.0.tif
-│   ├── TS_005_024_-33.0.tif
-│   ├── TS_005_025_-36.0.tif
-│   ├── TS_005_026_39.0.tif
-│   ├── TS_005_027_42.0.tif
-│   ├── TS_005_028_-39.0.tif
-│   ├── TS_005_029_-42.0.tif
-│   ├── TS_005_030_45.0.tif
-│   ├── TS_005_031_48.0.tif
-│   ├── TS_005_032_-45.0.tif
-│   ├── TS_005_033_-48.0.tif
-│   ├── TS_005_034_51.0.tif
-│   ├── TS_005_035_54.0.tif
-│   ├── TS_005_036_-51.0.tif
-│   ├── TS_005_037_-54.0.tif
-│   ├── TS_005_038_57.0.tif
-│   ├── TS_005_039_60.0.tif
-│   ├── TS_005_040_-57.0.tif
-│   └── TS_005_041_-60.0.tif
-├── tiltseries
-│   └── TS_005.mrc
-└── warp_ts_split_10453.py
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">what if I don't have mdoc files?</p>
-<p>You'll have to make them yourself!
-The <a href="https://teamtomo.org/mdocfile"><em>mdocfile</em></a> Python package might be useful.</p>
-</div>
-<h2 id="subsequent-processing">Subsequent Processing</h2>
-<p>You should now be able to follow the
-<a href="../../../user_guide/warptools/quick_start_warptools_tilt_series/">quick start guide for tilt series processing</a>.</p>
-<h3 id="differences">Differences</h3>
+<p><code>rlnAutopickFigureOfMerit</code> contains the final score. <code>wrpTemplateMatchProjectionZ</code> retains the projection score and <code>wrpTemplateMatchAmplitude</code> the unconstrained nonnegative amplitude. These are ranking statistics, not calibrated Gaussian Z scores or false-discovery probabilities. Final bounded scores can be negative.</p>
+<p>The matching directory also contains:</p>
 <ul>
-<li>use <code>fs_ctf</code> not <code>fs_motion_and_ctf</code> - you don't need to correct motion!</li>
-<li>copy and paste or symlink motion corrected averages into an <code>averages</code> directory inside your frame series processing directory</li>
-<li>you won't be able to refine motion correction results in M</li>
+<li><code>_starting_poses.tsv</code>: proposal centers, neighboring starts, angle IDs, and coarse scores.</li>
+<li><code>_refinement.tsv</code>: per-band poses, scores, convergence, merging, and optimizer diagnostics.</li>
+<li><code>_tilt_scores.tsv</code>: final per-tilt cross terms and model powers.</li>
+<li><code>_calibration.tsv</code>: slope objective values and selected tilt-scale corrections.</li>
+<li><code>_amplitude_bounds.tsv</code>: final interval and calibration-set size.</li>
 </ul>
+<p>Optional amplitude/B diagnostics remain available through <code>--refine_fit_bfactor</code> and <code>--refine_export_tilt_spectra</code>. They do not select particles. Optional independent complete decoy searches remain diagnostics; decoys are not part of the default ranking.</p>
+<h2 id="controls-and-resource-use">Controls and resource use</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--tomo_angpix</code></td>
+<td>required</td>
+<td>Coarse reconstruction and search sampling in Å.</td>
+</tr>
+<tr>
+<td><code>--subdivisions</code></td>
+<td>3</td>
+<td>HEALPix angular sampling, approximately 7.5°.</td>
+</tr>
+<tr>
+<td><code>--peak_distance</code></td>
+<td>half the diameter</td>
+<td>Spherical minimum particle separation in Å.</td>
+</tr>
+<tr>
+<td><code>--npeaks</code></td>
+<td>8000</td>
+<td>Maximum coarse candidate positions.</td>
+</tr>
+<tr>
+<td><code>--match_topk</code></td>
+<td>8</td>
+<td>Orientations retained per voxel.</td>
+</tr>
+<tr>
+<td><code>--refine_starts</code></td>
+<td>32</td>
+<td>Maximum hypotheses pooled from each peak and its neighbors.</td>
+</tr>
+<tr>
+<td><code>--refine_iterations</code></td>
+<td>90</td>
+<td>Maximum accepted BFGS steps per hypothesis per band.</td>
+</tr>
+<tr>
+<td><code>--refine_noise_patches</code></td>
+<td>256</td>
+<td>Unselected patches per tilt for the directional background PSD.</td>
+</tr>
+<tr>
+<td><code>--optimize_poses_angpix</code></td>
+<td><code>--tomo_angpix</code></td>
+<td>Finest refinement sampling in Å/px; defaults to the coarse-search pixel size.</td>
+</tr>
+<tr>
+<td><code>--max_missing_tilts</code></td>
+<td>-1</td>
+<td>Optional coarse coverage culling; disabled by default.</td>
+</tr>
+<tr>
+<td><code>--refine_max_shift</code></td>
+<td>3 coarse pixels</td>
+<td>Maximum displacement per coordinate from the proposal anchor.</td>
+</tr>
+<tr>
+<td><code>--refine_merge_fraction</code></td>
+<td>0.005</td>
+<td>Merge thresholds relative to the current band pixel.</td>
+</tr>
+<tr>
+<td><code>--batch_angles</code></td>
+<td>8</td>
+<td>Upper bound on simultaneous orientations; reduced to fit GPU memory.</td>
+</tr>
+</tbody>
+</table>
+<p>Leaderboards require <code>8*K</code> bytes per padded voxel. Large volumes may require more than 48 GB even with a single orientation batch. Background-patch FFTs and refinement particles are processed in bounded batches.</p>
+<p>Whitening and the multiresolution schedule are automatic. Top-K search followed by BFGS refinement is mandatory; there is no coarse-only mode or <code>--optimize_poses</code> switch. Saved coarse correlation/angle volumes are diagnostics, not restart files. The obsolete <code>--reuse_results</code> and <code>--dont_normalize</code> options have been removed; final scores are not standardized against a background correlation distribution. The CTF estimator itself is unchanged by this template-matching update.</p>
+<p>Pose refinement uses only FP32 BFGS. The experimental Gauss–Newton optimizer and <code>--refine_optimizer</code> selector have been removed.</p>
 
 
 
