@@ -3234,7 +3234,7 @@ contrast transfer function.</p>
 <div class="highlight"><span class="filename">Frame Series Motion and CTF Estimation</span><pre><span></span><code>WarpTools<span class="w"> </span>fs_motion_and_ctf<span class="w"> </span><span class="se">\</span>
 --settings<span class="w"> </span>warp_frameseries.settings<span class="w"> </span><span class="se">\</span>
 --m_grid<span class="w"> </span>1x1x3<span class="w"> </span><span class="se">\</span>
---c_grid<span class="w"> </span>2x2x1<span class="w"> </span><span class="se">\</span>
+--c_grid<span class="w"> </span>2x2<span class="w"> </span><span class="se">\</span>
 --c_range_max<span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="se">\</span>
 --c_defocus_max<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
 --c_use_sum<span class="w"> </span><span class="se">\</span>
@@ -3261,10 +3261,13 @@ per GPU. We typically use <code>--perdevice 4</code> on A100 cards with 80GB mem
 </div>
 <h4 id="parameters-explained">Parameters explained</h4>
 <h4 id="grids">Grids</h4>
-<p>The <code>--m_grid 1x1x3</code> and <code>--c_grid 2x2x1</code> parameters define the resolution (<code>XxYxT</code>) of
-motion and CTF models that will be estimated.</p>
+<p>The <code>--m_grid 1x1x3</code> parameter defines the spatial and temporal resolution (<code>XxYxT</code>)
+of the motion model. <code>--c_grid 2x2</code> defines the spatial resolution (<code>XxY</code>) of the
+CTF defocus model, which has no temporal dimension. By default, fitting uses the
+average of the individual frames’ power spectra. <code>--c_use_sum</code> instead uses the
+power spectrum of the movie average.</p>
 <p>When processing tilt series data we typically recommend <code>1x1xNFrames</code> for motion grids
-due to the low amount of signal available per tilt and <code>2x2x1</code> for CTF grids to enable
+due to the low amount of signal available per tilt and <code>2x2</code> for CTF grids to enable
 checking that defocus varies as expected across the tilt axis.</p>
 <h4 id="ctf-parameters">CTF Parameters</h4>
 <ul>
@@ -3494,7 +3497,7 @@ and applying a correction to the model if necessary.</p>
 <p class="annotate">First, we check how well our data match expectations. (1)</p>
 <ol>
 <li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> this check requires that defocus was estimated with at least
-   two points in each spatial dimension (i.e. minimum <code>2x2x1</code>).</li>
+   two points in each spatial dimension (i.e. minimum <code>2x2</code>).</li>
 </ol>
 <div class="highlight"><span class="filename">Defocus Handedness Check</span><pre><span></span><code>WarpTools ts_defocus_hand \
 --settings warp_tiltseries.settings \
