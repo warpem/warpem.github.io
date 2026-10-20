@@ -2420,6 +2420,20 @@
 
   <h1>Frame Series</h1>
 
+<p>CTF specimen-thickness fitting is disabled by default. Use <code>--fit_thickness</code> with
+<code>fs_ctf</code>, or <code>--c_fit_thickness</code> with <code>fs_motion_and_ctf</code>, to enable it. Without
+these flags, thickness is fixed to zero and saved as zero; defocus, astigmatism,
+and the spatial defocus grid are still fitted. The choice is saved in
+<code>OptionsCTF.FitThickness</code>. Enable thickness only when the fitted frequency range
+contains enough thickness-dependent signal to distinguish it from the envelope.</p>
+<p>The requested window is a minimum extraction size. At small pixel sizes or large
+defocus, the fitter enlarges the physical aperture to retain signal in the
+low-frequency support band (through 10 Å, or the requested coarser limit). Fourier padding
+alone cannot provide this support. The actual aperture is logged, while spectrum
+display dimensions retain the requested window size. Adequate requested apertures
+stay unchanged to preserve spatial sampling. The spatial defocus grid also models
+the defocus change across each aperture. Movie initialization pools all patch
+spectra before releasing the spatial grid.</p>
 <h2 id="fs_motion_and_ctf">fs_motion_and_ctf</h2>
 <div class="highlight"><pre><span></span><code>WarpTools - a collection of tools for EM data pre-processing
 Version 2.0.0
@@ -2473,6 +2487,8 @@ Showing all available options for command fs_motion_and_ctf:
                           ly 0.07-0.10 for cryo
 
 --c_fit_phase             Fit the phase shift of a phase plate
+
+--c_fit_thickness         Fit specimen thickness (disabled by default)
 
 --c_use_sum               Use the movie average spectrum instead of the average 
                           of individual frames' spectra. Can help in the absence
