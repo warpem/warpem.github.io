@@ -3237,7 +3237,6 @@ contrast transfer function.</p>
 --c_grid<span class="w"> </span>2x2<span class="w"> </span><span class="se">\</span>
 --c_range_max<span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="se">\</span>
 --c_defocus_max<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
---c_use_sum<span class="w"> </span><span class="se">\</span>
 --out_averages<span class="w"> </span><span class="se">\</span>
 --out_average_halves<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
@@ -3263,9 +3262,13 @@ per GPU. We typically use <code>--perdevice 4</code> on A100 cards with 80GB mem
 <h4 id="grids">Grids</h4>
 <p>The <code>--m_grid 1x1x3</code> parameter defines the spatial and temporal resolution (<code>XxYxT</code>)
 of the motion model. <code>--c_grid 2x2</code> defines the spatial resolution (<code>XxY</code>) of the
-CTF defocus model, which has no temporal dimension. By default, fitting uses the
-average of the individual frames’ power spectra. <code>--c_use_sum</code> instead uses the
-power spectrum of the movie average.</p>
+CTF defocus model, which has no temporal dimension.</p>
+<p>CTF fitting splits each movie into groups of about 3 e⁻/Å², shifts the frames of each
+group into register using the fitted motion, and sums the power spectra of the group
+averages. A group is short enough that motion doesn't blur the high-resolution Thon
+rings or the ice ring, and long enough for the signal to rise above each frame's shot
+noise. A tilt movie with less than 4 e⁻/Å² is a single group: its
+motion-corrected average.</p>
 <p>When processing tilt series data we typically recommend <code>1x1xNFrames</code> for motion grids
 due to the low amount of signal available per tilt and <code>2x2</code> for CTF grids to enable
 checking that defocus varies as expected across the tilt axis.</p>
@@ -3274,10 +3277,6 @@ checking that defocus varies as expected across the tilt axis.</p>
 <li><code>--c_range_max</code> is the maximum spatial resolution of information used for fitting in Å</li>
 <li><code>--c_defocus_max</code> is the maximum allowed defocus value</li>
 </ul>
-<p><code>--c_use_sum</code> controls whether CTF estimation use the power spectrum from the
-motion corrected average or the sum of per-frame power spectra for estimation.
-Estimating from the motion corrected average can be useful in the absence of an
-energy filter, or generally when per frame signal is low.</p>
 <h4 id="visualizing-results">Visualizing Results</h4>
 <p>Just because you're at the command line doesn't mean you should have to dig through
 text files to see how your processing went.

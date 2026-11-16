@@ -12,7 +12,7 @@
         <meta name="author" content="Dimitry Tegunov">
       
       
-        <link rel="canonical" href="https://warpem.com/superpowers/specs/2026-06-28-warptools-cluster-provisioning-design/">
+        <link rel="canonical" href="https://warpem.com/reference/blob_picker/">
       
       
       
@@ -20,19 +20,19 @@
         
       
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>WarpTools minimal cluster pool provisioning — design - Warp, M and friends</title>
+        <title>Micrograph blob picker (WarpWorker2 only) - Warp, M and friends</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,7 +57,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#warptools-minimal-cluster-pool-provisioning-design" class="md-skip">
+        <a href="#micrograph-blob-picker-warpworker2-only" class="md-skip">
           Skip to content
         </a>
       
@@ -98,9 +98,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Warp, M and friends" class="md-header__button md-logo" aria-label="Warp, M and friends" data-md-component="logo">
+    <a href="../.." title="Warp, M and friends" class="md-header__button md-logo" aria-label="Warp, M and friends" data-md-component="logo">
       
-  <img src="../../../assets/warp_m_logos_combined.png" alt="logo">
+  <img src="../../assets/warp_m_logos_combined.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WarpTools minimal cluster pool provisioning — design
+              Micrograph blob picker (WarpWorker2 only)
             
           </span>
         </div>
@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -232,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../user_guide/overview/" class="md-tabs__link">
+        <a href="../../user_guide/overview/" class="md-tabs__link">
           
   
   
@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../reference/warp/interface/interface_overview/" class="md-tabs__link">
+        <a href="../warp/interface/interface_overview/" class="md-tabs__link">
           
   
   
@@ -280,7 +280,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../papers/" class="md-tabs__link">
+      <a href="../../papers/" class="md-tabs__link">
         
   
   
@@ -337,7 +337,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../team/" class="md-tabs__link">
+      <a href="../../team/" class="md-tabs__link">
         
   
   
@@ -378,9 +378,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Warp, M and friends" class="md-nav__button md-logo" aria-label="Warp, M and friends" data-md-component="logo">
+    <a href="../.." title="Warp, M and friends" class="md-nav__button md-logo" aria-label="Warp, M and friends" data-md-component="logo">
       
-  <img src="../../../assets/warp_m_logos_combined.png" alt="logo">
+  <img src="../../assets/warp_m_logos_combined.png" alt="logo">
 
     </a>
     Warp, M and friends
@@ -461,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -489,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../home/warp/" class="md-nav__link">
+      <a href="../../home/warp/" class="md-nav__link">
         
   
   
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../home/m/" class="md-nav__link">
+      <a href="../../home/m/" class="md-nav__link">
         
   
   
@@ -606,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/overview/" class="md-nav__link">
+      <a href="../../user_guide/overview/" class="md-nav__link">
         
   
   
@@ -688,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/warp/quick_start_warp_frame_series/" class="md-nav__link">
+      <a href="../../user_guide/warp/quick_start_warp_frame_series/" class="md-nav__link">
         
   
   
@@ -716,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/warp/quick_start_warp_tilt_series/" class="md-nav__link">
+      <a href="../../user_guide/warp/quick_start_warp_tilt_series/" class="md-nav__link">
         
   
   
@@ -806,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/m/quick_start_m/" class="md-nav__link">
+      <a href="../../user_guide/m/quick_start_m/" class="md-nav__link">
         
   
   
@@ -896,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/warptools/installation/" class="md-nav__link">
+      <a href="../../user_guide/warptools/installation/" class="md-nav__link">
         
   
   
@@ -924,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/warptools/quick_start_warptools_frame_series/" class="md-nav__link">
+      <a href="../../user_guide/warptools/quick_start_warptools_frame_series/" class="md-nav__link">
         
   
   
@@ -952,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/warptools/quick_start_warptools_tilt_series/" class="md-nav__link">
+      <a href="../../user_guide/warptools/quick_start_warptools_tilt_series/" class="md-nav__link">
         
   
   
@@ -1103,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warp/interface/interface_overview/" class="md-nav__link">
+      <a href="../warp/interface/interface_overview/" class="md-nav__link">
         
   
   
@@ -1131,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warp/models/" class="md-nav__link">
+      <a href="../warp/models/" class="md-nav__link">
         
   
   
@@ -1159,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warp/task_dialogs_frame_series/" class="md-nav__link">
+      <a href="../warp/task_dialogs_frame_series/" class="md-nav__link">
         
   
   
@@ -1187,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warp/task_dialogs_tilt_series/" class="md-nav__link">
+      <a href="../warp/task_dialogs_tilt_series/" class="md-nav__link">
         
   
   
@@ -1277,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/m/particle_operations/" class="md-nav__link">
+      <a href="../m/particle_operations/" class="md-nav__link">
         
   
   
@@ -1421,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/api/general/" class="md-nav__link">
+      <a href="../warptools/api/general/" class="md-nav__link">
         
   
   
@@ -1449,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/api/frame_series/" class="md-nav__link">
+      <a href="../warptools/api/frame_series/" class="md-nav__link">
         
   
   
@@ -1477,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/api/tilt_series/" class="md-nav__link">
+      <a href="../warptools/api/tilt_series/" class="md-nav__link">
         
   
   
@@ -1513,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/environment_variables/" class="md-nav__link">
+      <a href="../warptools/environment_variables/" class="md-nav__link">
         
   
   
@@ -1541,7 +1541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/subsets/" class="md-nav__link">
+      <a href="../warptools/subsets/" class="md-nav__link">
         
   
   
@@ -1569,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/custom_tilt_series_alignments/" class="md-nav__link">
+      <a href="../warptools/custom_tilt_series_alignments/" class="md-nav__link">
         
   
   
@@ -1597,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/advanced_data_flow/" class="md-nav__link">
+      <a href="../warptools/advanced_data_flow/" class="md-nav__link">
         
   
   
@@ -1625,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/processing_tilt_series_stacks/" class="md-nav__link">
+      <a href="../warptools/processing_tilt_series_stacks/" class="md-nav__link">
         
   
   
@@ -1653,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/tomogram_denoising/" class="md-nav__link">
+      <a href="../warptools/tomogram_denoising/" class="md-nav__link">
         
   
   
@@ -1681,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/tomogram_particle_files/" class="md-nav__link">
+      <a href="../warptools/tomogram_particle_files/" class="md-nav__link">
         
   
   
@@ -1709,7 +1709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/template_matching_refinement/" class="md-nav__link">
+      <a href="../warptools/template_matching_refinement/" class="md-nav__link">
         
   
   
@@ -1737,7 +1737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/warptools/processing_warp_v1_data/" class="md-nav__link">
+      <a href="../warptools/processing_warp_v1_data/" class="md-nav__link">
         
   
   
@@ -1881,7 +1881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/mtools/api/mtools/" class="md-nav__link">
+      <a href="../mtools/api/mtools/" class="md-nav__link">
         
   
   
@@ -1909,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/mtools/api/mcore/" class="md-nav__link">
+      <a href="../mtools/api/mcore/" class="md-nav__link">
         
   
   
@@ -2007,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/boxnet/fs_training/" class="md-nav__link">
+      <a href="../boxnet/fs_training/" class="md-nav__link">
         
   
   
@@ -2050,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../papers/" class="md-nav__link">
+      <a href="../../papers/" class="md-nav__link">
         
   
   
@@ -2131,7 +2131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../team/" class="md-nav__link">
+      <a href="../../team/" class="md-nav__link">
         
   
   
@@ -2178,10 +2178,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#background-and-motivation" class="md-nav__link">
+  <a href="#validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Background and motivation
+        Validation
       
     </span>
   </a>
@@ -2189,187 +2189,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#relation-to-relion-log" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Goals
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#non-goals-explicitly-out-of-scope-for-this-minimal-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Non-goals (explicitly out of scope for this minimal version)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#provisioning-lifecycle-chosen-submit-once-cancel-on-shutdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Provisioning lifecycle chosen: submit-once + cancel-on-shutdown
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cli-options-added-to-distributedoptions-advanced-remote-work-distribution-group" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CLI options (added to DistributedOptions, "Advanced remote work distribution" group)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CLI options (added to DistributedOptions, &#34;Advanced remote work distribution&#34; group)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mode-selection-and-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mode selection and validation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-components-all-in-warplibworkersscheduling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        New components (all in WarpLib/Workers/Scheduling/)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="New components (all in WarpLib/Workers/Scheduling/)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clusterqueuedefinition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ClusterQueueDefinition
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clustervarparser-static" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ClusterVarParser (static)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#templaterenderer-static" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TemplateRenderer (static)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clusterprovisioner-iworkerprovisioner" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ClusterProvisioner : IWorkerProvisioner
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-into-distributedoptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integration into DistributedOptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-control-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data / control flow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#failure-validation-summary-all-throw-with-actionable-messages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Failure / validation summary (all throw with actionable messages)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Testing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stated-assumptions-surface-in-help-docs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stated assumptions (surface in --help / docs)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-work-the-seam-left-for-relay-grade-behaviour" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Future work (the seam left for Relay-grade behaviour)
+        Relation to RELION LoG
       
     </span>
   </a>
@@ -2396,240 +2219,99 @@
   
 
 
-<h1 id="warptools-minimal-cluster-pool-provisioning-design">WarpTools minimal cluster pool provisioning — design</h1>
-<h2 id="background-and-motivation">Background and motivation</h2>
-<p>WarpTools now distributes work through the filesystem work-queue system
-(<code>pending/</code> → <code>running/&lt;wid&gt;/</code> → <code>done/</code>/<code>failed/</code>/<code>poisoned/</code>). Two provisioning
-modes exist today:</p>
-<ul>
-<li><strong>Local</strong> (default): <code>LocalProvisioner</code> spawns <code>WarpWorker2</code> processes on the
-  local machine, one per GPU slot (<code>device_list</code> × <code>perdevice</code>).</li>
-<li><strong>External</strong>: <code>ExternalProvisioner</code> is a no-op; an external orchestrator (Relay)
-  provisions workers that claim from the shared queue directory.</li>
-</ul>
-<p>Relay is the intended way to drive large multi-node cluster runs, but it is months
-from release. In the meantime the only way for a user to run WarpTools across an HPC
-cluster is to roll their own worker provisioning by hand. This design adds a
-<strong>minimal, self-contained cluster provisioning mode to WarpTools itself</strong> so users
-can submit a worker pool to a batch scheduler (SLURM/LSF/PBS/SGE/anything) without
-Relay and without writing their own submission glue.</p>
-<p>The design deliberately mirrors Relay's templating approach (<code>{{ }}</code> placeholders, a
-queue-definition describing scheduler commands) so that knowledge transfers and a
-future migration to Relay is natural. It is intentionally a <strong>subset</strong> of Relay: no
-status polling, no deficit reconciliation, no pool-state persistence.</p>
-<h2 id="goals">Goals</h2>
-<ul>
-<li>Submit a pool of <code>WarpWorker2</code> workers to a batch scheduler that claim tasks from
-  the shared filesystem queue.</li>
-<li>Keep the scheduler-specific knowledge (submit/cancel commands, job-id parsing) in a
-  user-supplied JSON config, not hard-coded.</li>
-<li>Keep the submission-script shape in a user-supplied template with <code>{{ }}</code>
-  placeholders.</li>
-<li>Let users pass arbitrary template values on the command line without those values
-  being hard-coded as <code>DistributedOptions</code> properties.</li>
-<li>Never leave cluster jobs lingering: cancel the pool on clean drain, on Ctrl-C /
-  SIGTERM, and rely on the existing heartbeat net for hard crashes.</li>
-<li>Fail fast and clearly on any misconfiguration.</li>
-</ul>
-<h2 id="non-goals-explicitly-out-of-scope-for-this-minimal-version">Non-goals (explicitly out of scope for this minimal version)</h2>
-<ul>
-<li>Status polling / deficit reconciliation (resubmitting dead workers). If a worker's
-  node dies, the existing <code>Scheduler</code> stall-sweep re-pends its in-flight task and a
-  surviving worker picks it up; we just lose that worker's throughput for the rest of
-  the run. This is the accepted trade for "minimal".</li>
-<li>Pool-state persistence / restart recovery (Relay's <code>pool_state.json</code>).</li>
-<li>Per-scheduler built-in parsers. A single user-supplied regex covers job-id
-  extraction for any scheduler.</li>
-<li>Batch cancel (<code>{{job_ids}}</code>). Cancel is invoked once per job id.</li>
-<li>SSH-proxy shell override. Users who must submit from a login node bake <code>ssh</code> into
-  the <code>submit</code> command itself (the script path is on the shared filesystem and thus
-  visible on the login node).</li>
-</ul>
-<h2 id="provisioning-lifecycle-chosen-submit-once-cancel-on-shutdown">Provisioning lifecycle chosen: submit-once + cancel-on-shutdown</h2>
-<p>At startup the provisioner submits <code>pool_size</code> worker jobs, records their scheduler
-job ids, and cancels all of them on shutdown. There is no status polling and no
-resubmission. Correctness rests on the existing queue machinery:</p>
-<ul>
-<li>All tasks are enqueued before workers start, so <code>pending/</code> only ever shrinks.</li>
-<li>Workers run <code>--persistent</code>, so they do <strong>not</strong> exit on a transient empty queue.
-  This matters: if a node dies and the <code>Scheduler</code> re-pends its task, persistent
-  workers are still alive to claim it, instead of having exited and hanging the
-  drain.</li>
-<li>Persistent workers self-terminate when the manager's heartbeat goes stale
-  (<code>WorkerProcess.cs</code> "manager heartbeat stalled"), which ends their cluster job.</li>
-</ul>
-<p>This leaves a clean seam to grow into Relay-style deficit reconciliation later
-(see "Future work").</p>
-<h2 id="cli-options-added-to-distributedoptions-advanced-remote-work-distribution-group">CLI options (added to <code>DistributedOptions</code>, "Advanced remote work distribution" group)</h2>
-<ul>
-<li><code>--cluster_script &lt;path&gt;</code> — path to the submission-script template file.</li>
-<li><code>--cluster_config &lt;path&gt;</code> — path to the queue-definition JSON.</li>
-<li><code>--pool_size &lt;N&gt;</code> — number of worker jobs to submit (<code>int</code>).</li>
-<li><code>--cluster_var key=value</code> — repeatable (<code>IEnumerable&lt;string&gt;</code>); arbitrary template
-  values. Lenient around <code>=</code> (see "cluster_var parsing").</li>
-</ul>
-<h3 id="mode-selection-and-validation">Mode selection and validation</h3>
-<p>Three mutually exclusive provisioning modes: <strong>local</strong> (default), <strong>external</strong>
-(<code>--external_provisioner</code>), <strong>cluster</strong> (new).</p>
-<p>Cluster mode is selected when <code>--cluster_script</code> is present. Then:</p>
-<ul>
-<li><code>--cluster_config</code> is <strong>required</strong> (error if missing).</li>
-<li><code>--pool_size</code> must be <strong>&gt; 0</strong> (error otherwise).</li>
-<li><code>--external_provisioner</code> must <strong>not</strong> also be set (error on conflict).</li>
-<li><code>--device_list</code> is <strong>ignored</strong> (the scheduler allocates each job its GPU). Emit a
-  warning if it is explicitly set.</li>
-<li><code>--pool_size</code> counts cluster <strong>jobs</strong> (one GPU each); <code>--perdevice</code> worker processes
-  run per job, so the pool holds up to <code>pool_size × perdevice</code> workers.</li>
-</ul>
-<p>All validation throws early with an actionable message before any task is enqueued.</p>
-<h2 id="new-components-all-in-warplibworkersscheduling">New components (all in <code>WarpLib/Workers/Scheduling/</code>)</h2>
-<h3 id="clusterqueuedefinition"><code>ClusterQueueDefinition</code></h3>
-<p>Model + JSON loader for the queue-definition file. Exactly three fields:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">"submit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sbatch {{script_path}}"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"submit_job_id_regex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Submitted batch job (\\d+)"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"cancel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scancel {{job_id}}"</span>
-<span class="p">}</span>
+<h1 id="micrograph-blob-picker-warpworker2-only">Micrograph blob picker (WarpWorker2 only)</h1>
+<p>Queue a worker command with:</p>
+<div class="highlight"><pre><span></span><code><span class="n">WorkerCommands</span><span class="p">.</span><span class="n">MicrographPickBlobs</span><span class="p">(</span>
+<span class="w">    </span><span class="n">path</span><span class="p">:</span><span class="w"> </span><span class="s">"/data/micrographs/mic.mrc"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">radius</span><span class="p">:</span><span class="w"> </span><span class="mf">30f</span><span class="p">,</span>
+<span class="w">    </span><span class="n">innerRadius</span><span class="p">:</span><span class="w"> </span><span class="mf">15f</span><span class="p">,</span><span class="w">           </span><span class="c1">// optional; 0 for a disk</span>
+<span class="w">    </span><span class="n">minimumSeparation</span><span class="p">:</span><span class="w"> </span><span class="mf">60f</span><span class="p">);</span><span class="w">    </span><span class="c1">// optional; defaults to 2 * radius</span>
 </code></pre></div>
-<ul>
-<li><code>submit</code> — command to submit the rendered script. <code>{{script_path}}</code> is substituted
-  with the path to the script we wrote to disk. Run it, capture stdout.</li>
-<li><code>submit_job_id_regex</code> — the <strong>first capture group</strong> extracts the job id from that
-  stdout. One configurable regex covers all schedulers; we ship no per-scheduler
-  logic.</li>
-<li><code>cancel</code> — invoked once per tracked job id with <code>{{job_id}}</code> substituted.</li>
-</ul>
-<p>Loader throws listing any missing or empty field.</p>
-<h3 id="clustervarparser-static"><code>ClusterVarParser</code> (static)</h3>
-<p>Reassembles the flat <code>--cluster_var</code> token stream into a
-<code>Dictionary&lt;string,string&gt;</code>. Because the shell splits on spaces before WarpTools sees
-the args, a single logical pair can arrive split across up to three tokens. The
-parser accepts all four spellings:</p>
-<ul>
-<li><code>partition=gpu</code> (one token)</li>
-<li><code>partition= gpu</code> (<code>key=</code> + value)</li>
-<li><code>partition =gpu</code> (key + <code>=value</code>)</li>
-<li><code>partition = gpu</code> (key + <code>=</code> + value)</li>
-</ul>
-<p>Keys and values are trimmed. A value that itself contains a space must be quoted into
-a single shell token (<code>--cluster_var "account=my project"</code>). A <code>--cluster_var</code> with
-no <code>=</code> anywhere throws with a clear message.</p>
-<h3 id="templaterenderer-static"><code>TemplateRenderer</code> (static)</h3>
-<p>Regex <code>{{\s*name\s*}}</code> substitution, whitespace-tolerant, <strong>literal</strong> replacement so
-a <code>$</code> in a value is never treated as a regex backreference. After substitution it
-scans for any leftover <code>{{...}}</code> and <strong>throws listing every unfilled placeholder
-name</strong>. This is the opposite of Relay's silent-empty behaviour and is a hard
-requirement: a malformed directive should surface as a clear error, not a silently
-broken job script.</p>
-<h3 id="clusterprovisioner-iworkerprovisioner"><code>ClusterProvisioner : IWorkerProvisioner</code></h3>
-<p>The orchestrator. Implements <code>EnsureWorkers(int target)</code>, <code>LiveWorkerCount()</code>,
-<code>Shutdown()</code>.</p>
-<p><strong>Constructor</strong></p>
-<ul>
-<li>Builds the built-in <code>{{command}}</code> value. For <code>--perdevice N</code> it launches N worker
-  processes in the background on the job's one GPU and ends with <code>wait</code> (so the job
-  holds its allocation until the workers exit):
-  <div class="highlight"><pre><span></span><code>"&lt;abs WarpWorker2&gt;" --device 0 --queue-dir "&lt;queueDir&gt;" --log-dir "&lt;logDir&gt;" --persistent --worker-id "$(hostname)-$$-0" &amp;
-... (one line per process, index 0..N-1) ...
-wait
-</code></pre></div></li>
-<li>Executable is the absolute path <code>Path.Combine(AppContext.BaseDirectory,
-    "WarpWorker2")</code>, same as <code>LocalProvisioner</code>. Assumes the WarpTools install is
-    reachable at the same path on compute nodes (typical shared-filesystem HPC).</li>
-<li>Device is always <code>0</code> — each cluster job owns one GPU and sees it as device 0
-    (scheduler isolates via <code>CUDA_VISIBLE_DEVICES</code>); <code>--perdevice</code> processes share it.</li>
-<li><code>--persistent</code> so workers survive transient empty queues (see lifecycle).</li>
-<li><code>--worker-id "$(hostname)-$$-&lt;i&gt;"</code> — the compute node's shell expands <code>$(hostname)</code>
-    and <code>$$</code> at runtime; the per-process index <code>&lt;i&gt;</code> is required because <code>$$</code> (the
-    script's pid) is shared by all background children of one job. (Our default worker
-    id is <code>local-{pid}-gpu{dev}</code> with <strong>no</strong> hostname, which would collide across nodes,
-    so an explicit id is mandatory here.)</li>
-<li>Renders the template <strong>once</strong> (built-in <code>command</code> + <code>cluster_var</code> values) to
-  <code>&lt;queue&gt;/cluster/worker.sh</code>. Every job is byte-identical, so one script is submitted
-  <code>pool_size</code> times (each submission running <code>--perdevice</code> workers).</li>
-<li>Registers <code>Console.CancelKeyPress</code> and <code>PosixSignalRegistration</code> for SIGINT/SIGTERM,
-  each calling <code>Shutdown()</code>, so a Ctrl-C or <code>kill</code> on the manager cancels the pool
-  before the process dies.</li>
-</ul>
-<p><strong><code>EnsureWorkers(int target)</code></strong></p>
-<ul>
-<li>Submits <code>target - submittedCount</code> jobs (on the first tick this submits the whole
-  pool; subsequent ticks no-op). This matches the shape the <code>Scheduler</code> already
-  drives every tick and leaves the seam for future deficit reconciliation.</li>
-<li>For each submit: run the <code>submit</code> command (with <code>{{script_path}}</code>) through the
-  shell, capture stdout, apply <code>submit_job_id_regex</code>. <strong>Throw if no match</strong> — an
-  untrackable job cannot be cancelled and would linger.</li>
-<li>Store each parsed job id.</li>
-</ul>
-<p><strong><code>LiveWorkerCount()</code></strong> — returns the count of submitted job ids (no scheduler query
-in this minimal version).</p>
-<p><strong><code>Shutdown()</code></strong> — idempotent (cancel-once guard, since the <code>finally</code> block and the
-signal handlers may all call it). Runs the <code>cancel</code> command (with <code>{{job_id}}</code>) once
-per stored job id. Disposes the signal registrations.</p>
-<h2 id="integration-into-distributedoptions">Integration into <code>DistributedOptions</code></h2>
-<p>The provisioner-selection block is currently duplicated in <code>DistributeItems</code>
-(lines ~101-125) and <code>DistributeTasks</code> (~273-291). Extract it into one helper:</p>
-<div class="highlight"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="n">IWorkerProvisioner</span><span class="w"> </span><span class="nf">CreateProvisioner</span><span class="p">(</span>
-<span class="w">    </span><span class="n">QueueLayout</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">logDir</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">itemCount</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span>
+<p>The wire command is <code>MicrographPickBlobs</code>, with content <code>(string path,
+float radius, float innerRadius, float minimumSeparation)</code>. The handler also
+accepts omitted trailing arguments. It loads the micrograph directly, so no
+<code>LoadStack</code> init command is needed. There is no WarpTools verb for this command.</p>
+<p>All distances are in <strong>input micrograph pixels</strong>. The input must be a real,
+finite, single-plane micrograph. Radius must be positive, inner radius must be
+in <code>[0, radius)</code>, and separation must be positive. A ring must contain at least
+one sampled pixel. Intensities should have dark particles on a lighter background.</p>
+<p>Output: <code>/data/micrographs/matching/mic_blob.star</code>, with columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rlnCoordinateX</code>, <code>rlnCoordinateY</code></td>
+<td>Zero-based input pixel coordinates, following Warp's existing picking convention</td>
+</tr>
+<tr>
+<td><code>rlnMicrographName</code></td>
+<td>Input micrograph filename</td>
+</tr>
+<tr>
+<td><code>rlnAutopickFigureOfMerit</code></td>
+<td>Pearson correlation with the dark blob template, in <code>(0, 1]</code></td>
+</tr>
+<tr>
+<td><code>wrpAutopickPower</code></td>
+<td>Local variance (mean-subtracted mean-square intensity), in input intensity squared</td>
+</tr>
+</tbody>
+</table>
+<p>The template lives in a circular support of radius <code>2 * radius</code>. For a disk
+(<code>innerRadius</code> 0) it is a dark difference of Gaussians, with a centre sigma of
+<code>radius / 2</code> against a surround sigma of <code>radius</code>: a flat disk would score a
+particle equally wherever it fits inside, so its peak would wander, while this
+one peaks on the particle's dark mass. For a ring it is -1 within the annulus
+and 0 elsewhere, so pixels in the hole participate in the background. Either
+way, its mean over the support is subtracted. Correlation normalizes by the
+local variance and template energy; power is measured over the same full
+support. Positive intensity scaling preserves correlation and scales power by
+the square of the intensity scale. Constant offsets affect neither statistic.</p>
+<p>The micrograph is mirrored past its edges, so centres down to one radius from
+the border are scored and FFT wraparound cannot contribute; picks closer than
+one radius to an edge are dropped, since the particle disk must lie inside and
+its extraction box would leave the micrograph anyway. CUDA builds the template,
+computes correlations and local moments with cuFFT, and finds positive local
+maxima within <code>radius / 2</code> (ties resolved by the lower linear pixel index); only
+those are copied to the host. There is no further threshold, and the STAR
+exposes both statistics for downstream filtering.</p>
+<p>Suppression then compares picks with picks: strongest first, a pick is dropped
+if a stronger kept pick lies closer than the separation. A weaker particle more
+than the separation from a stronger one therefore survives even where the
+stronger one's slope outscores it. Picks are written strongest first.
+<code>BlobPicker.Revision</code> changes whenever the picks for the same image change.</p>
+<p>An empty result writes an empty STAR with all columns, replacing any previous
+picks. GPU failures or invalid input fail the queue item rather than writing
+an apparently successful empty result. Rebuild NativeAcceleration and the
+managed worker together before using the command.</p>
+<h2 id="validation">Validation</h2>
+<p>Managed validation, queue serialization and STAR round-trip tests:</p>
+<div class="highlight"><pre><span></span><code>dotnet<span class="w"> </span><span class="nb">test</span><span class="w"> </span>Tests/Tests.csproj<span class="w"> </span>--filter<span class="w"> </span><span class="s1">'FullyQualifiedName~BlobPickerTests'</span>
 </code></pre></div>
-<p>with three branches:</p>
-<ul>
-<li><strong>cluster</strong>: <code>target = Math.Min(itemCount, PoolSize)</code>; construct <code>ClusterProvisioner</code>.</li>
-<li><strong>external</strong>: <code>target = 0</code>; construct <code>ExternalProvisioner</code>.</li>
-<li><strong>local</strong>: resolve devices; <code>target = Math.Min(itemCount, devices * perdevice)</code>;
-  construct <code>LocalProvisioner</code>.</li>
-</ul>
-<p>Both <code>DistributeItems</code> and <code>DistributeTasks</code> call the helper, so cluster mode works
-for every ported command and for whole-run reduce tasks for free.</p>
-<h2 id="data-control-flow">Data / control flow</h2>
-<ol>
-<li>Enqueue all tasks (before the scheduler thread starts).</li>
-<li><code>Scheduler</code> tick → <code>EnsureWorkers(pool_size)</code> → render-once → <code>submit</code> × N →
-   parse and store job ids.</li>
-<li>Cluster workers land on compute nodes, self-name <code>$(hostname)-$$-&lt;i&gt;</code>, claim tasks
-   from the shared queue, run <code>--persistent</code>.</li>
-<li>Manager polls <code>done/</code>/<code>poisoned/</code> until drained.</li>
-<li>On drain (or Ctrl-C / SIGTERM) → <code>Shutdown()</code> → <code>cancel</code> every stored job id.</li>
-<li>Hard crash without cleanup: running workers self-exit on stale manager heartbeat;
-   only still-pending scheduler jobs would linger, which is exactly what the explicit
-   cancel in step 5 covers.</li>
-</ol>
-<h2 id="failure-validation-summary-all-throw-with-actionable-messages">Failure / validation summary (all throw with actionable messages)</h2>
-<ul>
-<li><code>--cluster_script</code> set but <code>--cluster_config</code> missing.</li>
-<li><code>--pool_size</code> &lt;= 0 in cluster mode.</li>
-<li><code>--cluster_script</code> and <code>--external_provisioner</code> both set.</li>
-<li>Malformed <code>--cluster_var</code> (no <code>=</code>).</li>
-<li>Queue-definition JSON missing/empty field.</li>
-<li>Unfilled <code>{{placeholder}}</code> after rendering (message lists every unfilled name).</li>
-<li><code>submit</code> stdout does not match <code>submit_job_id_regex</code>.</li>
-</ul>
-<h2 id="testing">Testing</h2>
-<ul>
-<li><strong>Unit — <code>ClusterVarParser</code></strong>: the four <code>=</code> spacings, a quoted value containing a
-  space, and the no-<code>=</code> error.</li>
-<li><strong>Unit — <code>TemplateRenderer</code></strong>: substitution (whitespace-tolerant, <code>$</code> literal) and
-  the unfilled-placeholder crash listing names.</li>
-<li><strong>Unit — <code>ClusterQueueDefinition</code></strong>: load success and missing-field errors.</li>
-<li><strong>Integration (Unix) — <code>ClusterProvisioner</code></strong>: a fake scheduler where <code>submit</code> is
-  <code>echo "Submitted batch job 12345"</code> (varying the id) and <code>cancel</code> touches a marker
-  file. Assert <code>EnsureWorkers</code> submits <code>pool_size</code> times, parses the ids, and
-  <code>Shutdown</code> runs <code>cancel</code> for each. No GPU or real cluster needed.</li>
-</ul>
-<h2 id="stated-assumptions-surface-in-help-docs">Stated assumptions (surface in <code>--help</code> / docs)</h2>
-<ul>
-<li>The queue directory is on a <strong>shared filesystem</strong> visible to all compute nodes.</li>
-<li>The WarpTools install is reachable at the <strong>same path</strong> on compute nodes.</li>
-<li>The submission script runs in a shell that expands <code>$(hostname)</code> and <code>$$</code>.</li>
-</ul>
-<h2 id="future-work-the-seam-left-for-relay-grade-behaviour">Future work (the seam left for Relay-grade behaviour)</h2>
-<ul>
-<li>Add optional <code>status</code>/<code>list</code> commands to the queue definition and have
-  <code>EnsureWorkers</code> resubmit to maintain the pool (deficit reconciliation) with a
-  submission cap.</li>
-<li>Pool-state persistence for manager restart recovery.</li>
-<li>Batch cancel via <code>{{job_ids}}</code>.</li>
-</ul>
+<p>The managed CUDA smoke test is enabled with <code>WARP_RUN_CUDA_TESTS=1</code>.
+The standalone CUDA suite tests the scoring kernel without the managed
+mirroring: it compares every valid pixel against a direct spatial reference on
+disk and ring images, and checks correlation/power scaling, border exclusion,
+flat/nonfinite input and fractional Euclidean separation of local maxima:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>NativeAcceleration
+nvcc<span class="w"> </span>-std<span class="o">=</span>c++17<span class="w"> </span>-arch<span class="o">=</span>sm_89<span class="w"> </span>-I.<span class="w"> </span>src/BlobPicker.cu<span class="w"> </span>tests/BlobPickerTests.cu<span class="w"> </span>-lcufft<span class="w"> </span>-o<span class="w"> </span>/tmp/blob_picker_tests
+/tmp/blob_picker_tests
+</code></pre></div>
+<h2 id="relation-to-relion-log">Relation to RELION LoG</h2>
+<p><a href="https://github.com/3dem/relion/blob/master/src/autopicker.cpp">RELION's LoG picker</a>
+searches multiple blob scales, including scales outside the requested diameter
+range for rejecting objects of the wrong size. That is useful when a single
+radius does not describe the particles. This command instead supplies one
+difference of Gaussians or an explicit annulus at one radius, with a locally normalized correlation and
+separate intensity power. A ring template can represent a prescribed hole that
+a standard LoG filter cannot parameterize independently. These are algorithmic
+differences, not evidence that either picker is better on experimental data;
+that requires comparison on representative micrographs.</p>
 
 
 
@@ -2685,10 +2367,10 @@ for every ported command and for whole-run reduce tasks for free.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.sections", "search.highlight", "search.suggest", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.sections", "search.highlight", "search.suggest", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
